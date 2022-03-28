@@ -25,7 +25,7 @@ namespace API.Controllers
         
         [HttpGet("{id}")]
         public  async Task<ActionResult<AppUser>> GetUser(int id){
-            return await _context.Users.FirstOrDefaultAsync(u=> u.Idc==id);
+            return await _context.Users.FirstOrDefaultAsync(u=> u.Id==id);
         }
     }
 }
